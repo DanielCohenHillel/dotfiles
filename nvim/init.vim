@@ -143,7 +143,7 @@ Plug 'HerringtonDarkholme/yats.vim'
 
 
 " (MINE) conda-vim
-Plug 'cjrh/vim-conda'
+" Plug 'cjrh/vim-conda'
 
 "*****************************************************************************
 "*****************************************************************************
@@ -414,7 +414,7 @@ if executable('rg')
 endif
 
 cnoremap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
-nnoremap <silent> <leader>b :Buffers<CR>
+"nnoremap <silent> <leader>b :Buffers<CR>
 nnoremap <silent> <leader>e :FZF -m<CR>
 "Recovery commands from history through FZF
 nmap <leader>y :History:<CR>
@@ -487,9 +487,15 @@ nnoremap <Leader>o :.Gbrowse<CR>
 "*****************************************************************************
 
 " c
+packadd termdebug
 autocmd FileType c setlocal tabstop=4 shiftwidth=4 expandtab
 autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 expandtab
 
+autocmd FileType cuda nnoremap <F5> :!nvcc -g % -o %:r<CR>
+au FileType cuda nnoremap <F6> :!nvcc -g % -o %:r<CR>:Termdebug<CR> <C-w>2j<C-w>H <C-w>l <C-\><C-n> 
+tnoremap <esc>  <c-\><c-n>
+tnoremap <esc>: <<c-\><c-n><c-\><c-n>:
+autocmd FileType cuda nnoremap <leader>b :Break<CR>
 
 " html
 " for html files, 2 spaces

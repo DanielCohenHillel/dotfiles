@@ -1,57 +1,44 @@
 #include <iostream>
 #include <math.h>
-#include <cuda_profiler_api.h>
+#include <chrono>
 
-// CUDA kernel to add elements of two arrays
-__global__
-void add(int n, float *x, float *y)
+__global__ void add(int n, float *x, float *y)
 {
-    int index = blockIdx.x * blockDim.x + threadIdx.x;
-    int stride = blockDim.x * gridDim.x;
+    int index = threadIdx.x;
+    int stride = blockDim.x;
     for (int i = index; i < n; i += stride)
         y[i] = x[i] + y[i];
 }
 
-void MatricxMul(){
-int *A = 
-
-
-}
-
 int main(void)
 {
-    int N = 1<<10;
+    int N = 1<<20; 
     float *x, *y;
-
-    // Allocate Unified Memory -- accessible from CPU or GPU
     cudaMallocManaged(&x, N*sizeof(float));
     cudaMallocManaged(&y, N*sizeof(float));
 
-    // initialize x and y arrays on the host
     for (int i = 0; i < N; i++) {
         x[i] = 1.0f;
         y[i] = 2.0f;
     }
+    
+    cudaFree(x);
+    cudaFree(y);
 
-    // Launch kernel on N elements on the GPU
-    int blockSize = 256;
-    int numBlocks = (N + blockSize - 1) / blockSize;
-    add<<<numBlocks, blockSize>>>(N, x, y);
+    auto t1 = std::chrono::high_resolution_clock::now();
+    add<<<1,256>>>(N, x, y); 
 
-    // Wait for GPU to finish before accessing on host
     cudaDeviceSynchronize();
 
-    // Check for errors (all values should be 3.0f)
+    auto t2 = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::microseconds>( t2 - t1 ).count();
     float maxError = 0.0f;
     for (int i = 0; i < N; i++)
         maxError = fmax(maxError, fabs(y[i]-3.0f));
-    std::cout << "Max error: " << maxError << std::endl;
-
-    // Free memory
-    cudaFree(x);
-    cudaFree(y);
-    cudaProfilerStop();
-    cudaDeviceReset();
-
+    std::cout << "Max error: " << maxError << std::endl; 
+    std::cout << duration;
+    delete [] x;
+    delete [] y;
     return 0;
 }
+
