@@ -1,1 +1,2 @@
-# Linux-Config
+# Linux Config 💾
+This is my linux config. I keep my dot files for various linux applications in here, I use this to easily setup new linux installations the way I like quickly. If you're looking at this repository there's something wrong with you, it a mess. Over time I started put in here random pieces of code I created when I was bored since it was the quickest way for me to move the code from one computer to another, yet another reason why you shouldn't be here.
