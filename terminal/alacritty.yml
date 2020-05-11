@@ -1,3 +1,5 @@
+# ~/.config/alacritty
+
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
 env:
   # TERM variable
