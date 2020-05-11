@@ -8,13 +8,13 @@ env:
 window:
   # Window dimensions (changes require restart)
   dimensions:
-    columns: 0
-    lines: 0
+    columns: 120
+    lines: 35
 
   # Window position (changes require restart)
-  position:
-    x: 0
-    y: 0
+  # position:
+  #   x: 0
+  #   y: 0
 
   # Window padding (changes require restart)
   padding:
@@ -25,7 +25,7 @@ window:
   dynamic_padding: false
 
   # Window decorations (None\Full)
-  decorations: full
+  decorations: none
 
   # Startup Mode (Windowed\Maximized\Fullscreen)
   startup_mode: Windowed
@@ -52,25 +52,25 @@ font:
   normal:
     # Font family
     # Default: (macOS) Menlo/(Linux) monospace/(Windows) Consolas
-    family: monospace
+    family: Source Code Pro
     style: Regular
 
   # Bold font face
   bold:
     # Font family
-    family: monospace
+    family: Source Code Pro
     style: Bold
 
   # Italic font face
   italic:
     # Font family
-    family: monospace
+    family: Source Code Pro
     style: Italic
 
   # Bold italic font face
   bold_italic:
     # Font family
-    family: monospace
+    family: Source Code Pro 
     style: Bold Italic
 
   # Point size
@@ -86,7 +86,7 @@ font:
   # increasing `y` moves the glyph upwards.
   glyph_offset:
     x: 0
-    y: 0
+    y: -1
 
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
@@ -154,7 +154,7 @@ visual_bell:
   color: '#ffffff'
 
 # Background opacity
-background_opacity: 0.8
+background_opacity: 0.9
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
