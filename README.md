@@ -11,4 +11,14 @@ These are my vim/neovim config. For more information about the neovim config you
 `conda install -c conda-forge jedi neovim autopep8` and `conda install -c anaconda pylint`
 
 ## WM - Window Managers ✊
-I mainly use bspwm now days. My `sxhkd` config is in the 'bspwm' folder alltough it is possible to use it with i3. 
+I mainly use bspwm now days. My `sxhkd` config is in the 'bspwm' folder alltough it is possible to use it with i3.
+
+To make compton run properly on arch, use [compton by tryone144](https://github.com/tryone144/compton) instead of the package in pacman.
+
+## Commands
+Some commands to run so I can setup fast.
+* Fish:
+    * Install [fish](https://fishshell.com/)
+    * [Make fish the default shell](https://wiki.archlinux.org/index.php/Command-line_shell) -> `chsh -l` to list all installed shell and then `chsh -s path-to-fish` to make default.
+    * Install [OMF](https://github.com/oh-my-fish/oh-my-fish) -> `curl -L https://get.oh-my.fish | fish`
+
