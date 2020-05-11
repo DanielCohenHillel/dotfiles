@@ -1,0 +1,11 @@
+# ~/
+[user]
+	email = danielgch98@gmail.com
+	name = Daniel Cohen Hillel
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	unstage = reset HEAD --
+	last = log -1 HEAD
