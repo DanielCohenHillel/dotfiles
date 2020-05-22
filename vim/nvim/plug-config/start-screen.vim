@@ -28,14 +28,13 @@ let g:webdevicons_enable_startify = 1
 function! StartifyEntryFormat()
         return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
     endfunction
-
+    
 let g:startify_bookmarks = [
-            \ { 'c': '~/.config/i3/config' },
+            \ { 'p': '~/Desktop/projects'},
+            \ { 'c': '~/Desktop/coding' },
             \ { 'i': '~/.config/nvim/init.vim' },
-            \ { 'z': '~/.zshrc' },
-            \ '~/Blog',
-            \ '~/Code',
-            \ '~/Pics',
+            \ { 'b': '~/.config/bspwm/' },
+            \ { 'h': '~' },
             \ ]
 
 let g:startify_enable_special = 0

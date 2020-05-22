@@ -79,5 +79,7 @@ else
   cnoreabbrev W w
   cnoreabbrev Q q
   cnoreabbrev Qall qall nnoremap <silent> <M-l>    :vertical resize +2<CR>
+
+  nnoremap <C-M-n> :CocCommand python.execInTerminal<CR>
 endif
 
