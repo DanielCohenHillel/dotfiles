@@ -20,8 +20,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'tpope/vim-surround'
   " Better Comments
   Plug 'tpope/vim-commentary'
+  " Plug 'preservim/nerdcommenter'
   " Have the file system follow you around
   Plug 'airblade/vim-rooter'
+  " auto set indent settings
+  Plug 'tpope/vim-sleuth'
 
   if exists('g:vscode')
     " Easy motion for VSCode
@@ -37,16 +40,22 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/rainbow_parentheses.vim'
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
+    " Cool Icons
+    Plug 'ryanoasis/vim-devicons'
     " Auto pairs for '(' '[' '{' 
     Plug 'jiangmiao/auto-pairs'
+    " Closetags
+    Plug 'alvan/vim-closetag'
     " Themes
     Plug 'christianchiarulli/onedark.vim'
     " Plug 'kaicataldo/material.vim'
+    " Plug 'NLKNguyen/papercolor-theme'
+    " Plug 'tomasiser/vim-code-dark'
     " Intellisense
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Status Line
     Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
+    " Plug 'vim-airline/vim-airline-themes'
     " Ranger
     " Plug 'francoiscabrol/ranger.vim'
     " Plug 'rbgrouleff/bclose.vim'
@@ -55,7 +64,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     " Git
-    Plug 'mhinz/vim-signify'
+    " Plug 'mhinz/vim-signify'
+    Plug 'airblade/vim-gitgutter'
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-rhubarb'
     Plug 'junegunn/gv.vim'
@@ -65,7 +75,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'mhinz/vim-startify'
     " Vista
     Plug 'liuchengxu/vista.vim'
-    " Help
+    " See what keys do like in emacs
     Plug 'liuchengxu/vim-which-key'
     " Zen mode
     Plug 'junegunn/goyo.vim'
@@ -74,9 +84,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Snippets TODO fix TAB hijack
     " Plug 'SirVer/ultisnips'
     " Better Comments
-    Plug 'jbgutierrez/vim-better-comments'
-
-    " Plug 'davidhalter/jedi-vim'
+    " Plug 'jbgutierrez/vim-better-comments'
+    " Echo doc
+    " Plug 'Shougo/echodoc.vim'
+    " Interactive code
+    Plug 'metakirby5/codi.vim'
+    Plug 'https://github.com/vimwiki/vimwiki.git'
   endif
 
 

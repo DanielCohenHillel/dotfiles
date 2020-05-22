@@ -1,11 +1,5 @@
-" set leader key
-"map <Space> <Leader>
-"nmap <space> <leader>
-let mapleader=','
-" let mapleader=" "
-nnoremap <Space> <Nop>
-let g:interpreter = 'python'
 set iskeyword+=-                      	" treat dash separated words as a word text object"
+set formatoptions-=cro                  " Stop newline continution of comments
 
 if !exists('g:vscode')
   syntax enable                           " Enables syntax highlighing
@@ -27,9 +21,8 @@ if !exists('g:vscode')
   set expandtab                           " Converts tabs to spaces
   set smartindent                         " Makes indenting smart
   set autoindent                          " Good auto indent
-  set laststatus=0                        " Always display the status line
-  set number
-  set relativenumber                      " Line numbers
+  set laststatus=2                        " Always display the status line
+  set number                              " Line numbers
   set cursorline                          " Enable highlighting of the current line
   set background=dark                     " tell vim what the background color looks like
   set showtabline=2                       " Always show tabs 
@@ -40,14 +33,15 @@ if !exists('g:vscode')
   set signcolumn=yes                      " Always show the signcolumn, otherwise it would shift the text each time
   set updatetime=300                      " Faster completion
   set timeoutlen=100                      " By default timeoutlen is 1000 ms
-  set formatoptions-=cro                  " Stop newline continution of comments
   set clipboard=unnamedplus               " Copy paste between vim and everything else
   set incsearch
+  set guifont=Hack\ Nerd\ Font
+  " let $NVIM_TUI_ENABLE_TRUE_COLOR=1
   " set mmp=1300
   " set autochdir                           " Your working directory will always be the same as your working directory
   " set foldcolumn=2                        " Folding abilities
 
-  au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
+  " au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
   autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 
