@@ -50,20 +50,15 @@ scrolling:
 font:
   # Normal (roman) font face
   normal:
-    # Font family
     # Default: (macOS) Menlo/(Linux) monospace/(Windows) Consolas
     family: Source Code Pro
     style: Regular
-
   # Bold font face
   bold:
-    # Font family
     family: Source Code Pro
     style: Bold
-
   # Italic font face
   italic:
-    # Font family
     family: Source Code Pro
     style: Italic
 
