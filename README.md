@@ -21,6 +21,7 @@ Some commands to run so I can setup fast.
     * Install [fish](https://fishshell.com/)
     * [Make fish the default shell](https://wiki.archlinux.org/index.php/Command-line_shell) -> `chsh -l` to list all installed shell and then `chsh -s path-to-fish` to make default.
     * Install [OMF](https://github.com/oh-my-fish/oh-my-fish) -> `curl -L https://get.oh-my.fish | fish`
+    * To show conda enviroment (this should be set `False` when using zsh!) conda config --set changeps1 True
 * Git: 
    * Cache credentials: `git config credential.helper cache`
    * Don't forget to copy .gitconfig to home (`cp .gitconfig ~/`)
