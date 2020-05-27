@@ -25,3 +25,7 @@ Some commands to run so I can setup fast.
    * Cache credentials: `git config credential.helper cache`
    * Don't forget to copy .gitconfig to home (`cp .gitconfig ~/`)
 
+**Important:** To use my alacritty configuration (alacritty) you need the latest version of
+alacritty from the git repo. Download ([alacritty-git](https://aur.archlinux.org/packages/alacritty-git/)). 
+If you don't want to use the unstable git version, you can simply remove all the vi-mode related
+key bindings.
