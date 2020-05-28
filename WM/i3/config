@@ -40,11 +40,15 @@ bindsym $mod+x kill
 bindsym $mod+d exec rofi -show run
 bindsym $alt+Tab exec rofi -show window
 
-# Change focus
-# bindsym $mod+h focus left
-# bindsym $mod+j focus down
-# bindsym $mod+k focus up
-# bindsym $mod+l focus right
+# change focus
+bindsym $mod+h exec i3-msg border pixel 2; focus left
+bindsym $mod+j exec i3-msg border pixel 2; focus down
+bindsym $mod+k exec i3-msg border pixel 2; focus up
+bindsym $mod+l exec i3-msg border pixel 2; focus right
+bindsym --release $mod+h exec i3-msg border pixel 0
+bindsym --release $mod+j exec i3-msg border pixel 0
+bindsym --release $mod+k exec i3-msg border pixel 0
+bindsym --release $mod+l exec i3-msg border pixel 0
 
 # Change focus (arrow keys)
 bindsym $mod+Left focus left
@@ -52,11 +56,15 @@ bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-# Move focused window
-# bindsym $mod+Shift+h move left
-# bindsym $mod+Shift+j move down
-# bindsym $mod+Shift+k move up
-# bindsym $mod+Shift+l move right
+# move focused window
+bindsym $mod+Shift+h exec i3-msg border pixel 2; move left
+bindsym $mod+Shift+j exec i3-msg border pixel 2; move down
+bindsym $mod+Shift+k exec i3-msg border pixel 2; move up
+bindsym $mod+Shift+l exec i3-msg border pixel 2; move right
+bindsym --release $mod+Shift+h exec i3-msg border pixel 0
+bindsym --release $mod+Shift+j exec i3-msg border pixel 0
+bindsym --release $mod+Shift+k exec i3-msg border pixel 0
+bindsym --release $mod+Shift+l exec i3-msg border pixel 0
 
 # Move focused window (Arrow keys)
 bindsym $mod+Shift+Left move left
@@ -226,24 +234,3 @@ mode "$mode_gaps_outer" {
 bindsym $mod+semicolon exec i3-msg border pixel 3
 bindsym --release $mod+semicolon exec i3-msg border pixel 0
 
-# change focus
-bindsym $mod+h exec i3-msg border pixel 2; focus left
-bindsym $mod+j exec i3-msg border pixel 2; focus down
-bindsym $mod+k exec i3-msg border pixel 2; focus up
-bindsym $mod+l exec i3-msg border pixel 2; focus right
-bindsym --release $mod+h exec i3-msg border pixel 0
-bindsym --release $mod+j exec i3-msg border pixel 0
-bindsym --release $mod+k exec i3-msg border pixel 0
-bindsym --release $mod+l exec i3-msg border pixel 0
-# alt-tab focus
-bindsym $mod+Tab exec i3-msg border pixel 2; focus right 
-
-# move focused window
-bindsym $mod+Shift+h exec i3-msg border pixel 2; move left
-bindsym $mod+Shift+j exec i3-msg border pixel 2; move down
-bindsym $mod+Shift+k exec i3-msg border pixel 2; move up
-bindsym $mod+Shift+l exec i3-msg border pixel 2; move right
-bindsym --release $mod+Shift+h exec i3-msg border pixel 0
-bindsym --release $mod+Shift+j exec i3-msg border pixel 0
-bindsym --release $mod+Shift+k exec i3-msg border pixel 0
-bindsym --release $mod+Shift+l exec i3-msg border pixel 0
