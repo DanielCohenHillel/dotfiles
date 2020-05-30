@@ -1,0 +1,6 @@
+# Stop screen from going blank
+set s offx
+xset -dpms
+xset s noblank
+# Faster key repeat and delay
+xset r rate 210 40
