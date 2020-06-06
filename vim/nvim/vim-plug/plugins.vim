@@ -89,7 +89,24 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'Shougo/echodoc.vim'
     " Interactive code
     Plug 'metakirby5/codi.vim'
-    Plug 'https://github.com/vimwiki/vimwiki.git'
+    " Plug 'https://github.com/vimwiki/vimwiki.git'
+
+    Plug 'honza/vim-snippets'
+
+    Plug 'tpope/vim-surround'
+    
+    Plug 'Yggdroot/indentLine'
+    let g:indentLine_faster     = 1
+    let g:indentLine_setConceal = 0
+
+    Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+
+    Plug 'lervag/vimtex'
+    let g:tex_flavor='latex'
+    let g:vimtex_view_method='zathura'
+    let g:vimtex_quickfix_mode=0
+    set conceallevel=1
+    let g:tex_conceal='abdmg'
   endif
 
 

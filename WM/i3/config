@@ -6,7 +6,8 @@ set $Alt Mod1
 
 # ------------------------------- Init -------------------------------
 # Background wallpaper
-exec_always feh --bg-scale /usr/share/backgrounds/gnome/Dark_Ivy.jpg
+# exec_always feh --bg-scale /usr/share/backgrounds/gnome/adwaita-morning.jpg
+exec_always feh --bg-scale /home/dnl/Downloads/BG0.jpg
 
 # Start compositor (for transparent BG and stuff)
 exec_always compton
@@ -164,7 +165,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        bindsym h resize shrink width 10 px or 10 ppt bindsym j resize grow height 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
         bindsym k resize shrink height 10 px or 10 ppt
         bindsym l resize grow width 10 px or 10 ppt
 
@@ -234,3 +236,4 @@ mode "$mode_gaps_outer" {
 bindsym $mod+semicolon exec i3-msg border pixel 3
 bindsym --release $mod+semicolon exec i3-msg border pixel 0
 
+focus_follows_mouse no
