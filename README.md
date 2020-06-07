@@ -31,3 +31,7 @@ Some commands to run so I can setup fast.
 alacritty from the git repo. Download ([alacritty-git](https://aur.archlinux.org/packages/alacritty-git/)). 
 If you don't want to use the unstable git version, you can simply remove all the vi-mode related
 key bindings.
+
+Some fixes for gnome and gtk:
+`conda install -c gtk3 pygobject`
+This command is problematic and takes a looooooooooooongggg (tens of minutes) time to execute.
