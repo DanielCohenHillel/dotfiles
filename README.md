@@ -7,7 +7,7 @@ code from one computer to another, yet another reason why you shouldn't be here.
 ## vim ☕
 These are my vim/neovim config. For more information about the neovim config you can check out [this](https://github.com/ChristianChiarulli/nvim).
 
-**Important:** For neovim to work correctly with the coc-intellisense you need to run `:CocInstall coc-json coc-python coc-snippets coc-vimlsp coc-explorer`. Also make sure to install the right version of everything (especially `jedi`). Run 
+**Important:** For neovim to work correctly with the coc-intellisense you need to run `:CocInstall coc-json coc-python coc-snippets coc-vimlsp coc-explorer coc-clangd`. Also make sure to install the right version of everything (especially `jedi`). Run 
 `conda install -c conda-forge jedi neovim autopep8 pynvim` and `conda install -c anaconda pylint`
 
 ## WM - Window Managers ✊
@@ -25,8 +25,13 @@ Some commands to run so I can setup fast.
 * Git: 
    * Cache credentials: `git config credential.helper cache`
    * Don't forget to copy .gitconfig to home (`cp .gitconfig ~/`)
+* NerdFonts: `git clone https://github.com/ryanoasis/nerd-fonts` and run install script `./install.sh` to install all fonts.
 
 **Important:** To use my alacritty configuration (alacritty) you need the latest version of
 alacritty from the git repo. Download ([alacritty-git](https://aur.archlinux.org/packages/alacritty-git/)). 
 If you don't want to use the unstable git version, you can simply remove all the vi-mode related
 key bindings.
+
+Some fixes for gnome and gtk:
+`conda install -c gtk3 pygobject`
+This command is problematic and takes a looooooooooooongggg (tens of minutes) time to execute.
