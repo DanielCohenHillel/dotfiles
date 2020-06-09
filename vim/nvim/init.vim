@@ -22,6 +22,7 @@ else
   " ordinary neovim
   source $HOME/.config/nvim/themes/syntax.vim
   source $HOME/.config/nvim/themes/onedark.vim
+  " source $HOME/.config/nvim/themes/material.vim
   source $HOME/.config/nvim/themes/airline.vim
   source $HOME/.config/nvim/plug-config/rnvimr.vim
   source $HOME/.config/nvim/plug-config/fzf.vim
@@ -40,6 +41,10 @@ else
   source $HOME/.config/nvim/plug-config/vista.vim
   luafile $HOME/.config/nvim/lua/plug-colorizer.lua
   " source $HOME/.config/nvim/plug-config/easymotion.vim
+  source $HOME/.config/nvim/plug-config/vimtex.vim
+  source $HOME/.config/nvim/plug-config/vim-markdown.vim
+  source $HOME/.config/nvim/plug-config/indentLine.vim
+
 endif
 
 " Experimental

@@ -54,10 +54,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Status Line
     Plug 'vim-airline/vim-airline'
-    " Plug 'vim-airline/vim-airline-themes'
     " Ranger
-    " Plug 'francoiscabrol/ranger.vim'
-    " Plug 'rbgrouleff/bclose.vim'
     Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
     " FZF
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -82,34 +79,29 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'neomake/neomake'
     " Snippets TODO fix TAB hijack
     Plug 'SirVer/ultisnips'
+    Plug 'honza/vim-snippets'
     " Better Comments
     Plug 'jbgutierrez/vim-better-comments'
     " Echo doc
     Plug 'Shougo/echodoc.vim'
     " Interactive code
     Plug 'metakirby5/codi.vim'
-    " Plug 'https://github.com/vimwiki/vimwiki.git'
-    Plug 'vimwiki/vimwiki'
 
-    Plug 'honza/vim-snippets'
+    " Plug 'vimwiki/vimwiki'
 
     Plug 'tpope/vim-surround'
     
     Plug 'Yggdroot/indentLine'
-    let g:indentLine_faster     = 1
-    let g:indentLine_setConceal = 0
 
-    " Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 
     Plug 'lervag/vimtex'
-    let g:tex_flavor='latex'
-    let g:vimtex_view_method='zathura'
-    let g:vimtex_quickfix_mode=0
-    set conceallevel=1
-    let g:tex_conceal='abdmg'
 
     Plug 'dhruvasagar/vim-table-mode'
+
+    Plug 'elzr/vim-json'
+
+    Plug 'plasticboy/vim-markdown'
   endif
 
 
