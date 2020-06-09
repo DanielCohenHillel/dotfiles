@@ -4,8 +4,7 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   "autocmd VimEnter * PlugInstall
   autocmd VimEnter * PlugInstall | source $MYVIMRC
-endif
-
+endif 
 call plug#begin('~/.config/nvim/autoload/plugged')
 
   " Change dates fast
@@ -82,14 +81,15 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Making stuff
     Plug 'neomake/neomake'
     " Snippets TODO fix TAB hijack
-    " Plug 'SirVer/ultisnips'
+    Plug 'SirVer/ultisnips'
     " Better Comments
-    " Plug 'jbgutierrez/vim-better-comments'
+    Plug 'jbgutierrez/vim-better-comments'
     " Echo doc
-    " Plug 'Shougo/echodoc.vim'
+    Plug 'Shougo/echodoc.vim'
     " Interactive code
     Plug 'metakirby5/codi.vim'
     " Plug 'https://github.com/vimwiki/vimwiki.git'
+    Plug 'vimwiki/vimwiki'
 
     Plug 'honza/vim-snippets'
 
@@ -99,7 +99,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     let g:indentLine_faster     = 1
     let g:indentLine_setConceal = 0
 
-    Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+    " Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 
     Plug 'lervag/vimtex'
     let g:tex_flavor='latex'
@@ -107,6 +108,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     let g:vimtex_quickfix_mode=0
     set conceallevel=1
     let g:tex_conceal='abdmg'
+
+    Plug 'dhruvasagar/vim-table-mode'
   endif
 
 

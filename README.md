@@ -17,15 +17,16 @@ To make compton run properly on arch, use [compton by tryone144](https://github.
 
 ## Commands
 Some commands to run so I can setup fast.
-* Fish:
+* **Fish:**
     * Install [fish](https://fishshell.com/)
     * [Make fish the default shell](https://wiki.archlinux.org/index.php/Command-line_shell) -> `chsh -l` to list all installed shell and then `chsh -s path-to-fish` to make default.
     * Install [OMF](https://github.com/oh-my-fish/oh-my-fish) -> `curl -L https://get.oh-my.fish | fish`
     * To show conda enviroment (this should be set `False` when using zsh!) conda config --set changeps1 True
-* Git: 
+* **Git:**
    * Cache credentials: `git config credential.helper cache`
    * Don't forget to copy .gitconfig to home (`cp .gitconfig ~/`)
-* NerdFonts: `git clone https://github.com/ryanoasis/nerd-fonts` and run install script `./install.sh` to install all fonts.
+* **NerdFonts:** `git clone https://github.com/ryanoasis/nerd-fonts` and run install script `./install.sh` to install all fonts.
+* **Markdown preview:** Need to install some package for [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim) to work. `npm i tslib neovim log4js socket.io msgpack-lite`
 
 **Important:** To use my alacritty configuration (alacritty) you need the latest version of
 alacritty from the git repo. Download ([alacritty-git](https://aur.archlinux.org/packages/alacritty-git/)). 
