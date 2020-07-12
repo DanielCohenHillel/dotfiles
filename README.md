@@ -55,3 +55,21 @@ need the newer git versions. These are:
    the vi-mode related key bindings.
 * [zathura-git](https://aur.archlinux.org/packages/zathura-git/).
     *Note:* Don't forget to install `zathura-pdf-mupdf` (not git version)
+
+## Packages to install
+
+Some packages that are needed for everything to work that I probably forgot to install
+
+* Official
+  * nvidia
+  * xclip
+  * nodejs
+  * feh
+  * mpd
+  * man and man-db
+  * arc-gtk-theme
+* AUR
+  * autotiling
+  * zathura-git
+  * zathura-pdf-mupdf
+
